@@ -1,11 +1,16 @@
-function togglePopup() {
-    var popup = new bootstrap.Modal(document.getElementById('popup'));
+function togglePopup1() {
+    var popup = new bootstrap.Modal(document.getElementById('popup1'));
     popup.show();
+}
+
+function togglePopup2() {
+    var popup2 = new bootstrap.Modal(document.getElementById('popup2'));
+    popup2.show();
 }
 
 $(document).ready(function() {
     const envelope = $('#envelope');
-    const h1Element = $('.greeting-card h1.display-6');
+    const h1Element = $('.greeting-card1 h1.display-6');
     const messages = ["Haii !", "Hi There !", "Bonjour !", "Ohayou !", "Annyeong !", "Ni Hao !", "Hola !", "Hallo !"];
     let messageIndex = 0;
 
@@ -41,3 +46,19 @@ function showImageDetail(src, title) {
     var myModal = new bootstrap.Modal(document.getElementById('imageDetailModal'));
     myModal.show();
 }
+
+const musicButton = document.getElementById('musicPlayerButton');
+const music = document.getElementById('backgroundMusic');
+
+musicButton.addEventListener('click', () => {
+    if (music.paused) {
+        music.play();
+        musicButton.textContent = '⏸️';
+    } else {
+        music.pause();
+        musicButton.textContent = '▶️';
+    }
+});
+
+const backgroundMusic = document.getElementById('backgroundMusic');
+backgroundMusic.volume = 0.5;
