@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Message for Duchess Emily</title>
+    <title>Emii's Comfort Zone</title>
     <link rel="icon" href="./images/0322 (1).png" type="image/x-icon">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -342,9 +343,39 @@
 
     <div class="musicplayer">
         <button id="musicPlayerButton">
-            ▶️
+            <i class="bi bi-soundwave"></i>
         </button>
-        <audio id="backgroundMusic" src="./music/Take A Chance.mp3" volume="0.5"></audio>
+    </div>
+
+    <div class="modal fade" id="musicPlayerPopup" tabindex="-1" aria-labelledby="musicPlayerPopupLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" id="musicPlayerContent">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="musicPlayerPopupLabel">Emii's Jukebox 🎶</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="music-player">
+                        <img id="albumCover" src="./images/take a chance cover.png" alt="Album Cover" class="album-cover">
+                        <div class="track-info">
+                            <h6 id="trackTitle" class="track-title">Take A Chance</h6>
+                            <p id="trackArtist" class="track-artist">fromis_9</p>
+                        </div>
+                        <div class="controls">
+                            <button id="prevButton" class="control-btn styled-btn">
+                                <i class="bi bi-skip-backward-fill"></i>
+                            </button>
+                            <button id="playPauseButton" class="control-btn styled-btn">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                            <button id="nextButton" class="control-btn styled-btn">
+                                <i class="bi bi-skip-forward-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
