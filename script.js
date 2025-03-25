@@ -12,7 +12,7 @@ const songs = [
     {
         title: "Take A Chance",
         artist: "fromis_9",
-        src: "./music/Take a Chance.mp3",
+        src: "./music/Take A Chance.mp3",
         cover: "./images/take a chance cover.png",
     },
     {
