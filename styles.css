@@ -15,11 +15,15 @@
 }
 
 body {
-    background-color: var(--color-bg);
+    margin: 0;
+    padding: 0;
+    background-image: url("./images/bg koket kayak emi.svg");
+    background-size: contain;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 #popup1 {
@@ -215,7 +219,7 @@ body {
 
 .envelope-wrapper {
     height: 380px;
-    margin-top: 50px;
+    z-index: 1;
     animation: float 3s ease-in-out infinite;
 }
 
@@ -408,4 +412,98 @@ body {
 
 .musicplayer button:hover {
     background-color: #e91e63;
+}
+
+#musicPlayerContent {
+    background-color: #ffe6f0; /* Light pink background */
+    border: 2px solid #ff85a2; /* Pink border */
+    border-radius: 10px;
+    color: #d46a84; /* Darker pink text */
+    text-align: center;
+}
+
+#musicPlayerContent .modal-header {
+    background-color: #ff85a2; /* Pink header */
+    color: white;
+    border-bottom: none;
+}
+
+#musicPlayerContent .btn-close {
+    background-color: #ff85a2;
+    color: white;
+}
+
+#musicPlayerContent .btn-close:hover {
+    background-color: #d46a84;
+}
+
+.music-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.album-cover {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.album-cover.animate {
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.track-info {
+    transition: opacity 0.5s ease;
+}
+
+.track-info.animate {
+    opacity: 0;
+}
+
+.track-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.track-artist {
+    font-size: 14px;
+    color: #7a7a7a;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.control-btn {
+    background-color: #ff85a2;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: #d46a84;
+}
+
+#playPauseButton {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
 }
